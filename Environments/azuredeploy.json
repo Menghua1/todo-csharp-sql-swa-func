@@ -85,12 +85,14 @@
     },
     "sqlAdminPassword": {
       "type": "securestring",
+      "defaultValue":"$(secretOrRandomPassword ${AZURE_KEY_VAULT_NAME} sqlAdminPassword)",
       "metadata": {
         "description": "SQL Server administrator password"
       }
     },
     "appUserPassword": {
       "type": "securestring",
+      "defaultValue":"$(secretOrRandomPassword ${AZURE_KEY_VAULT_NAME} appUserPassword)",
       "metadata": {
         "description": "Application user password"
       }
