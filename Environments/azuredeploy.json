@@ -254,7 +254,7 @@
         "parameters": {
           "name": "[if(not(empty(parameters('webServiceName'))), createObject('value', parameters('webServiceName')), createObject('value', format('{0}web-{1}', variables('abbrs').webStaticSites, variables('resourceToken'))))]",
           "location": {
-            "value": "[parameters('location')]"
+            "value": "eastus2"
           },
           "tags": {
             "value": "[variables('tags')]"
