@@ -85,14 +85,14 @@
     },
     "sqlAdminPassword": {
       "type": "securestring",
-      "defaultValue":"[uniqueString(resourceGroup().id, 'sqlAdminPassword')]",
+      "defaultValue":"[base64(concat('A', uniqueString(resourceGroup().id, deployment().name, 'sqlAdminPassword', 'B', guid(resourceGroup().id))))]",
       "metadata": {
         "description": "SQL Server administrator password"
       }
     },
     "appUserPassword": {
       "type": "securestring",
-       "defaultValue":"[uniqueString(resourceGroup().id, 'appUserPassword')]",
+       "defaultValue":"[base64(concat('A', uniqueString(resourceGroup().id, deployment().name, 'appUserPassword', 'B', guid(resourceGroup().id))))]",
       "metadata": {
         "description": "Application user password"
       }
