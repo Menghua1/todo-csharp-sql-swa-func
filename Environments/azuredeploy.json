@@ -19,7 +19,7 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "eastus2",
+      "defaultValue": "[resourceGroup().location]",
       "minLength": 1,
       "metadata": {
         "description": "Primary location for all resources"
