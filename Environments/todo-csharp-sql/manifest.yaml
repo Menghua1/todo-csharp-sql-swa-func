@@ -12,3 +12,8 @@ parameters:
     description: 'Name of the Web App.'
     type: string
     required: true
+  - id: AZURE_PRINCIPAL_ID
+    name: AZURE_PRINCIPAL_ID
+    description: 'AZURE_PRINCIPAL_ID.'
+    type: string
+    required: true
